@@ -1,0 +1,19 @@
+@use '~@angular/material' as mat;
+
+@import "~@angular/material/theming";
+
+$app-typography: mat.define-typography-config(
+  $font-family: "'Montserrat', 'Helvetica Neue', sans-serif",
+  $body-1: mat.define-typography-level(1rem, 20px, 300),
+  $body-2: mat.define-typography-level(1rem, 24px, 400),
+  $button: mat.define-typography-level(1rem, 14px, 600),
+  $input: mat.define-typography-level(inherit, 1.25, 400),
+);
+
+@include mat.all-component-typographies($app-typography);
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: geometricPrecision;
+}

@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+@import "src/assets/styles/theme.scss";
+@import "src/assets/styles/typography.scss";
+@import "src/assets/styles/breakpoints.scss";
+@import "src/assets/styles/scrollbar.scss";
+@import "src/assets/styles/layout.scss";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+img,
+video {
+  display: block;
+}

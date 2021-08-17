@@ -1,0 +1,137 @@
+
+// -------------------------------------------------- REM E ESTILOS GLOBAIS
+// ************************************************************************
+
+html{
+  // -------------------------------- BASE DO REM
+  font-size: 29px;
+
+}
+
+
+
+// -------------------------------------------------- LAYOUTS GLOBAIS
+// ******************************************************************
+
+
+// -------------------------------- SECTIONS ------------------------
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  padding: clamp(2rem, 10vw, 5rem) 0;
+
+  border: 3px solid red;
+  background-color: rgba($color: #FDD, $alpha: 0.25);
+
+  // -------------------------------- ROWS --------------------------
+
+  // - MODIFICADORES DE ROWS -
+
+  .cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .full {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  // - ESTILO PADRÃO DA ROW -
+
+  .row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: clamp(1rem, 5vw, 2rem);
+    height: 100%;
+    width: 90%;
+    max-width: 1530px;
+    margin: 0 5%;
+
+    border: 3px solid green;
+    background-color: rgba($color: #DFD, $alpha: 0.25);
+
+    // -------------------------------- ARTICLES---------------------
+
+    // - MODIFICADORES DE ARTICLES -
+
+    .center {
+      place-self: center;
+      align-items: center;
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    // - ESTILO PADRÃO DO ARTICLE -
+
+    article {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      picture, img { max-width: 100%; }
+      p {
+        font-size: clamp(0.7rem, 3vw, 1rem);
+        line-height: clamp(1.1rem, 4vw, 1.4rem);
+        margin: 0 0 clamp(1.1rem, 4vw, 1.4rem) 0;
+        font-weight: 400;
+        color: #222222;
+      }
+      h1 {
+        font-size: clamp(1rem, 10vw, 3.3rem);
+        line-height: clamp(1.2rem, 12vw, 4rem);
+        font-weight: 700;
+        color: #222222;
+      }
+      h2 {
+        font-size: clamp(0.9rem, 5vw, 2.1rem);
+        line-height: clamp(1.4rem, 6vw, 2.5rem);
+        font-weight: 700;
+        color: #434343;
+        margin: 0 0 clamp(1rem, 6vw, 2.5rem) 0;
+      }
+      h3 {
+        font-size: clamp(0.6rem, 3vw, 1.1rem);
+        line-height: clamp(1rem, 4vw, 1.4rem);
+        text-transform: uppercase;
+        font-weight: 400;
+        color: #222222;
+        margin: 0 0 clamp(0rem, 1vw, 0.5rem) 0;
+      }
+      h4 {
+        font-size: clamp(0.8rem, 4.5vw, 1.2rem);
+        line-height: clamp(1.1rem, 6vw, 1.5rem);
+        font-weight: 700;
+        color: #222222;
+      }
+
+      border: 3px solid blue;
+      background-color: rgba($color: #DDF, $alpha: 0.25);
+    }
+  }
+}
+
+
+// -------------------------------------------------- LAYOUTS ESPECÍFICOS
+// **********************************************************************
+
+
+// -------------------------------- BANNER
+
+.banner {
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-size: clamp(1500px, 100%, 100%) !important;
+  background-position-y: center !important;
+  background-position-x: center !important;
+  .row {
+    article {
+      max-width: 25rem;
+      h1, h4 { color:#FFFFFF; }
+    }
+  }
+}
